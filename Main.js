@@ -2,10 +2,10 @@
 const { Octokit } = require("@octokit/rest");
 
 //Insert your GitHub tokens here in next format ['token1', 'token2', 'token'] 
-const gitTokens = ['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']
+const gitTokens = ['']
 
 //Insert your GitHub names here in next format ['namel', 'name2', 'name'] 
-const gitNames = ['WlinnaW']
+const gitNames = ['']
 
 function generateUniqueName () {
 return `result_${Math.floor(Math.random() * 150000000)}.txt`;
