@@ -2,10 +2,10 @@
 const { Octokit } = require("@octokit/rest");
 
 //Insert your GitHub tokens here in next format ['token1', 'token2', 'token'] 
-const gitTokens = ['token']
+const gitTokens = ['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']
 
 //Insert your GitHub names here in next format ['namel', 'name2', 'name'] 
-const gitNames = ['name']
+const gitNames = ['WlinnaW']
 
 function generateUniqueName () {
 return `result_${Math.floor(Math.random() * 150000000)}.txt`;
@@ -27,6 +27,8 @@ const hash  = generateRandomString(12);
 const randomIndex = Math.floor(Math.random() * 2);
 const result = randomIndex === 0 ? "Success" : "Failure";
 
+async function pushRandomName (repoOwner, token) {
+  const octokit = new Octokit ({auth: token});
 try {
 
 const branchFilesData = await octokit.rest.repos.getContent({ 
